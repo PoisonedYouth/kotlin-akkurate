@@ -13,9 +13,9 @@ repositories {
 dependencies {
     implementation("io.arrow-kt:arrow-core-jvm:1.2.1")
 
-    implementation("dev.nesk.akkurate:akkurate-core:0.2.0")
-    implementation("dev.nesk.akkurate:akkurate-ksp-plugin:0.2.0")
-    ksp("dev.nesk.akkurate:akkurate-ksp-plugin:0.2.0")
+    implementation("dev.nesk.akkurate:akkurate-core:0.3.0")
+    implementation("dev.nesk.akkurate:akkurate-ksp-plugin:0.3.0")
+    ksp("dev.nesk.akkurate:akkurate-ksp-plugin:0.3.0")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0")

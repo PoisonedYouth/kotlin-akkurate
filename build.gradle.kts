@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.9.10"
-    id("com.google.devtools.ksp") version "1.9.10-1.0.13"
+    kotlin("jvm") version "1.9.20"
+    id("com.google.devtools.ksp") version "1.9.20-1.0.14"
 }
 
 group = "com.poisonedyouth.akkurate"
@@ -13,8 +13,8 @@ repositories {
 dependencies {
     implementation("io.arrow-kt:arrow-core-jvm:1.2.1")
 
-    implementation("dev.nesk.akkurate:akkurate-core:0.3.0")
-    implementation("dev.nesk.akkurate:akkurate-ksp-plugin:0.3.0")
+    implementation("dev.nesk.akkurate:akkurate-core:0.5.0")
+    implementation("dev.nesk.akkurate:akkurate-ksp-plugin:0.5.0")
     ksp("dev.nesk.akkurate:akkurate-ksp-plugin:0.3.0")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0")
@@ -28,5 +28,11 @@ tasks.test {
 }
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(21)
+
+    sourceSets.all {
+        languageSettings {
+            languageVersion = "2.0"
+        }
+    }
 }
